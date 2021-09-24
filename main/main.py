@@ -1,18 +1,21 @@
-if __name__ == '__main__':
-    from tkinter import *
-    from tkinter import ttk
+from tkinter import *
+from tkinter import ttk
 
 window = Tk()
-window.title("Добро пожаловать в приложение PythonRu")
-window.geometry('400x250')
+window.title("Название")
+window.geometry('1200x800')
 tab_control = ttk.Notebook(window)
 tab1 = ttk.Frame(tab_control)
 tab2 = ttk.Frame(tab_control)
+tab3 = ttk.Frame(tab_control)
 tab_control.add(tab1, text='Первая')
 tab_control.add(tab2, text='Вторая')
+tab_control.add(tab3, text='Третья')
 lbl1 = Label(tab1, text='Вкладка 1')
 lbl1.grid(column=0, row=0)
 lbl2 = Label(tab2, text='Вкладка 2')
 lbl2.grid(column=0, row=0)
+lbl3 = Label(tab3, text='Вкладка 3')
+lbl3.grid(column=0, row=0)
 tab_control.pack(expand=1, fill='both')
 window.mainloop()
